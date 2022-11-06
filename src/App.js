@@ -25,7 +25,7 @@ class App extends React.Component{
       <h4>{this.state.profession} </h4>
       <img src={'./profile.jpeg'}/> 
       <button onClick={(()=>this.Show())}>Show profile</button>
-      {Timer}
+      <Timer/>
       {this.state.show &&<App/>}
       </>
     )

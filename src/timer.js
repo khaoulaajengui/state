@@ -9,7 +9,14 @@ class Timer extends Component{
         }
     }
     componentDidMount(){
-        this.setState({intervall:setInterval(() => {this.setState({timer:this.state.Timer +1})}, 1000)})
+        this.setState({intervall: setInterval(()=>this.setState({Timer: this.state.Timer +1}),1000) })    }
+    
+    componentDidUpdate(){
+        console.log(this.state.Timer);
+    }
+    componentWillUnmount(){
+        console.log('comp is killed');
+        clearInterval(this.state.intervall)
     }
 
     render(){
